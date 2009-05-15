@@ -1,9 +1,4 @@
 
- 
- 
-##############  commands #################
- 
-run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js > public/javascripts/jquery.js"
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
 run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore}
 file '.gitignore', <<-ENDEND
@@ -23,8 +18,6 @@ run "rm public/robots.txt"
 plugin 'rspec', :git => 'git://github.com/dchelimsky/rspec.git'
 plugin 'rspec-rails', :git => 'git://github.com/dchelimsky/rspec-rails.git'
 plugin 'exception_notifier', :git => 'git://github.com/rails/exception_notification.git'
-plugin 'asset_packager', :git => 'http://synthesis.sbecker.net/pages/asset_packager'
-plugin 'make_resourceful', :git => 'git://github.com/hcatlin/make_resourceful.git'
 plugin 'cucumber', :git => 'git://github.com/aslakhellesoy/cucumber.git' 
 plugin 'webrat', :git => 'git://github.com/brynary/webrat.git'
 plugin 'haml', :git => "git://github.com/nex3/haml.git"
@@ -54,7 +47,7 @@ end
 inside ('') do
   run 'capify .'
 end
-
+run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore}
 file '.gitignore', <<-CODE
 log/*.log
 tmp/**/*
