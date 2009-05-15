@@ -36,6 +36,9 @@ generate("rspec")
 generate('features')
 generate('clearance')
 
+rake "db:create:all"
+rake 'db:migrate'
+
 run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js > public/javascripts/jquery.js"
 inside ('public/javascripts') do
   run "rm prototype.js"
