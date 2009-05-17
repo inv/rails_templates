@@ -50,6 +50,7 @@ plugin 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 plugin 'make_resourceful', :git => "git://github.com/hcatlin/make_resourceful.git"
 plugin 'jrails', :git => 'git://github.com/aaronchi/jrails.git '
 plugin 'uberkit', :git => 'git://github.com/mbleigh/uberkit.git'
+plugin 'machinist', :git => 'git://github.com/technoweenie/machinist.git'
 
 
 gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate',  :source => 'http://gems.github.com'
@@ -57,6 +58,7 @@ gem 'rubyist-aasm', :lib => 'aasm'
 gem 'ruby-openid', :lib => 'openid'
 gem 'oauth', :version => '>= 0.3.1'
 gem 'twitter-auth', :lib => 'twitter_auth'
+gem 'faker', :version => '~>0.3'
 
 
 run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js > public/javascripts/jquery.js"
