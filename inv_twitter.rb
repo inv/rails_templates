@@ -99,6 +99,12 @@ CODE
 file 'tmp/.gitignore', <<CODE
 *
 CODE
+
+if yes?("\nRun rake gems:install? (yes/no)")
+  rake("gems:install", :sudo => true)
+  rake("gems:unpack")
+end
+
 generate("rspec")
 generate('cucumber')
 generate('twitter_auth')
@@ -320,10 +326,7 @@ git :commit => '-m "Adding in templates, gems, and plugins."'
 
 
 
-if yes?("\nRun rake gems:install? (yes/no)")
-  rake("gems:install", :sudo => true)
-  rake("gems:unpack")
-end
+
 
 if yes?("\nCreate and migrate databases now? (yes/no)")
   rake("db:create:all")
