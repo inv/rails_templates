@@ -59,6 +59,7 @@ gem 'ruby-openid', :lib => 'openid'
 gem 'oauth', :version => '>= 0.3.1'
 gem 'twitter-auth', :lib => 'twitter_auth'
 gem 'faker', :version => '~>0.3'
+gem 'treetop', :version => '>=1.2.5'
 
 
 run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js > public/javascripts/jquery.js"
